@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Introduction</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:20px;
+    }
+
+    .card{
+      background:white;
+      width:380px;
+      border-radius:20px;
+      padding:30px;
+      text-align:center;
+      box-shadow:0 10px 25px rgba(0,0,0,0.2);
+      animation: fadeIn 1s ease;
+    }
+
+    .profile-img{
+      width:120px;
+      height:120px;
+      border-radius:50%;
+      background:#ddd;
+      margin:auto;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-size:50px;
+      color:#555;
+      margin-bottom:20px;
+    }
+
+    h1{
+      color:#333;
+      margin-bottom:10px;
+    }
+
+    h3{
+      color:#666;
+    }
+
+    .info{
+      text-align:left;
+      margin-top:20px;
+    }
+
+    .info p{
+      margin:10px 0;
+      color:#444;
+      font-size:16px;
+      line-height:1.5;
+    }
+
+    button{
+      margin-top:20px;
+      padding:12px 25px;
+      border:none;
+      border-radius:10px;
+      background:#4facfe;
+      color:white;
+      font-size:16px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    button:hover{
+      background:#008cff;
+      transform:scale(1.05);
+    }
+
+    #message{
+      margin-top:20px;
+      color:#333;
+      font-weight:bold;
+      line-height:1.6;
+      min-height:80px;
+    }
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(20px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="profile-img">
+      👩
+    </div>
+
+    <h1>Sarah Garcera Dairo</h1>
+    <h3>IT Student - 3rd Year</h3>
+
+    <div class="info">
+      <p><strong>Age:</strong> 21</p>
+      <p><strong>Address:</strong> Purok 1, Brgy. Pange, Matnog, Sursogon</p>
+      <p><strong>Course:</strong> Information Technology</p>
+    </div>
+
+    <button onclick="showMessage()">About Me</button>
+
+    <p id="message"></p>
+  </div>
+
+  <script>
+    const messages = [
+      "Hello! My name is Sarah Garcera Dairo 😊",
+      "I am a 3rd Year Information Technology student 💻",
+      "I live in Purok 1, Brgy. Pange, Matnog, Sursogon 🏡",
+      "I am 21 years old and passionate about technology 🌟",
+      "My dream is to become a successful IT professional 🚀",
+      "I enjoy learning programming and web development 🌐",
+      "I love exploring new technologies and improving my skills 📚",
+      "Thank you for visiting my introduction website ❤️"
+    ];
+
+    function showMessage() {
+      const randomIndex = Math.floor(Math.random() * messages.length);
+      document.getElementById("message").innerHTML = messages[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
