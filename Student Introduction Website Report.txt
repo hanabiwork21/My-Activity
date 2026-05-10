@@ -1,0 +1,113 @@
+Student Introduction Website Report
+Introduction
+
+This project is a simple Student Introduction Website created using HTML, CSS, and JavaScript. The purpose of the website is to display personal information about a student in a clean and interactive design. The webpage contains a profile section, student details, and a button that shows random messages about the student.
+
+Objectives
+
+The objectives of this project are:
+
+To create a simple personal introduction webpage.
+To practice using HTML for webpage structure.
+To apply CSS for styling and design.
+To use JavaScript for adding interactivity.
+To develop a responsive and user-friendly interface.
+
+Technologies Used
+Technology:	Purpose:
+HTML		Creates the structure of the webpage
+CSS		Designs and styles the webpage
+JavaScript	Adds interaction and dynamic content
+
+Explanation of the Code
+1. HTML Structure
+
+HTML is used to build the content and layout of the webpage.
+
+Document Declaration
+<!DOCTYPE html>
+This tells the browser that the document uses HTML5.
+
+Head Section
+The <head> section contains important information about the webpage such as the title and style settings.
+<title>Student Introduction</title>
+This sets the title displayed in the browser tab.
+
+Body Section
+The <body> contains the visible content of the webpage.
+<div class="card">
+This creates the main container or card for the student profile.
+
+Student Information
+The webpage displays the student’s:
+
+Name
+Course and year level
+Age
+Address
+Program/Course
+
+Example: <h1>Sarah Garcera Dairo</h1>
+This displays the student’s name as the main heading.
+
+Button
+<button onclick="showMessage()">About Me</button>
+This button activates the JavaScript function that displays random messages.
+
+2. CSS Design
+CSS is used to improve the appearance of the webpage.
+Background Design
+background: linear-gradient(to right, #4facfe, #00f2fe);
+This creates a blue gradient background.
+
+Card Styling
+.card{
+  background:white;
+  border-radius:20px;
+}
+This styles the card with:
+White background
+Rounded corners
+Clean appearance
+
+Button Effects
+button:hover{
+  background:#008cff;
+}
+When the mouse points to the button, the color changes for better interaction.
+
+3. JavaScript Functionality
+JavaScript adds interactivity to the webpage.
+Messages Array
+const messages = [
+This stores multiple introduction messages.
+
+Example messages include:
+Student introduction
+Educational background
+Career goals
+Interests in technology
+
+showMessage Function
+function showMessage() {
+This function is executed when the button is clicked.
+
+Random Message Generator
+Math.floor(Math.random() * messages.length);
+This selects a random message from the list.
+
+Displaying the Message
+document.getElementById("message").innerHTML
+This displays the selected message on the webpage.
+
+Features of the Website
+The website includes the following features:
+Responsive design
+Student profile card
+Interactive “About Me” button
+Random message display
+Modern and simple user interface
+Animation effects
+
+Conclusion
+The Student Introduction Website demonstrates the basic use of HTML, CSS, and JavaScript in web development. HTML provides the structure, CSS improves the design, and JavaScript adds functionality and interactivity. This project is useful for beginners who want to learn how to create simple and interactive webpages.
